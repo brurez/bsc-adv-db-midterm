@@ -11,6 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: example
     volumes:
       - .:/src
+    ports:
+      - "3366:3306"
 
   adminer:
     image: adminer
