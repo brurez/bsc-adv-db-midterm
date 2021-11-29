@@ -5,7 +5,15 @@ const data = require("./data.json");
 
 const db = createDbConnection(fullPrivilegesOnMusic);
 
-createMusics(data).then(console.log);
+createCountries(data).then(() => {
+  createGenres(data).then(() => {
+    createInstruments(data).then(() => {
+      createComposers(data).then(() => {
+        createMusics(data).then(() => console.log('done!'))
+      })
+    })
+  })
+})
 
 async function createMusics(data) {
   for (const item of data) {

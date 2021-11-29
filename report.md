@@ -68,10 +68,19 @@ The method of collection and preparation that were made on this data
 are accurately documented in the Yale-Classical Archives Corpus (YCAC) article [2].
 
 #### Interrelation
-
+This dataset could be connected, for example, with another dataset about where and
+when those piece of music where performed. This relation between these
+two dataset could be done by using a composite foreign key referencing
+both the music title and composer name to avoid more generic titles like "Violin Concerto No. 1"
+to be referenced incorrecly.
 #### Use
 
+This dataset could be useful in any context where we have users listening
+or playing those music pieces by complementing the information about
+the music. 
+
 #### Discoverability
+It wasn't hard to find this dataset. There are many initiatives that try to catalog and record pertinent information about classical musical pieces.
 
 #### License / terms of use
 The article about the dataset [2] was published under "Creative Commons Attribution-NonCommercial 4.0 International License".
