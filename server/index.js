@@ -16,7 +16,7 @@ app.get('/api/', (req, res) => {
 
 app.use('/api', routes);
 
-app.use(express.static('public'))
+app.use(express.static('build'))
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
