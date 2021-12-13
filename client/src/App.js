@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "bulma/css/bulma.css";
 
 function randomColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
