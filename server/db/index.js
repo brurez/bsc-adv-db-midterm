@@ -8,7 +8,7 @@ const createDbConnection = credential => {
     client: 'mysql2',
     connection: {
       host: '127.0.0.1',
-      port: 3366,//3306,
+      port: 3306,//3366,
       database: 'music_metadata',
       ...credential
     }

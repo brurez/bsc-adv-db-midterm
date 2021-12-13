@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "start": "cd server && npm start",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start \"",
-    "install-all": "concurrently \"cd server && npm install\" \"cd client && npm install\"",
-    "insert-data": "node server/db/insert-data-from-csv.js"
+    "install-all": "npm i && concurrently \"cd server && npm install\" \"cd client && npm install\"",
+    "insert-data": "node server/db/insert-data-from-csv.js",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
