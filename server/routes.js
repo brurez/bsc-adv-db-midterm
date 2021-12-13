@@ -7,15 +7,14 @@ const router = Router();
 const db = createDbConnection(readPrivilegesOnMusic);
 
 router.get("/musics", async (req, res) => {
-  const { year } = req.query;
+  const { offset } = req.query;
   const [musics] = await db.raw(
     `
         SELECT * FROM music
         LEFT JOIN composer ON composer.composer_id = music.composer_id
-        ORDER BY ?
         LIMIT 10 OFFSET ?
   `,
-    [orderBy, Number(offset)]
+    [Number(offset)]
   );
   res.json(musics);
 });
